@@ -1,10 +1,10 @@
-1       |    index    | working tree
---|:--:|:--:|
---soft  |     不变     |不变
---mixed |     重置     |不变
---hard  |     重置     |重置
---merge |     重置     |更新
---keep  | 重置entries(staged => unstaged)  |更新
+1       |    index    | working tree           | commit与head的文件变动
+--|:--:|:--:|-
+--soft  |     不变     |不变                    | commit => staged
+--mixed |     重置     |不变                    | commit => unstaged
+--hard  |     重置     |重置                    | commit => discard
+--merge |     重置     |更新                    | commit => working tree/unstaged保留
+--keep  | 重置entries(staged => unstaged)  |更新| commit => working tree/staged=>unstaged
 
 [working tree](https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefworkingtreeaworkingtree): The tree of actual checked out files. The working tree normally contains the contents of the HEAD commit’s tree, plus any local changes that you have made but not yet committed.
 

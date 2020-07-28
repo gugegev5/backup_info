@@ -29,7 +29,11 @@ user-scalable |	一个布尔值（yes 或者no） | 如果设置为 no，那么�
 出处: [https://github.com/blog/273-github-ribbons  ](https://github.com/blog/273-github-ribbons)
 ```html
 <a href="https://github.com/you">
-  <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+  <img width="149" height="149" 
+       src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" 
+       class="attachment-full size-full" 
+       alt="Fork me on GitHub" 
+       data-recalc-dims="1">
 </a>
 ```
 的確是自定義屬性，用於改善搜索引擎優化。可以參考 [Canonical link element](https://en.wikipedia.org/wiki/Canonical_link_element) 的解釋。由於被各大搜索引擎使用，基本已經成爲半個標準。  

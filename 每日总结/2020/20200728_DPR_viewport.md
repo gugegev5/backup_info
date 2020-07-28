@@ -38,3 +38,6 @@ user-scalable |	一个布尔值（yes 或者no） | 如果设置为 no，那么�
 ```
 的確是自定義屬性，用於改善搜索引擎優化。可以參考 [Canonical link element](https://en.wikipedia.org/wiki/Canonical_link_element) 的解釋。由於被各大搜索引擎使用，基本已經成爲半個標準。  
 > [Custom Attributes in HTML 5](http://www.javascriptkit.com/dhtmltutors/customattributes.shtml)
+
+# [使用Flexible实现手淘H5页面的终端适配](https://github.com/amfe/article/issues/17)
+[2015 article](https://github.com/amfe/article)

@@ -17,11 +17,11 @@ PPI（Pixels Per Inch）即像素密度，表示每英寸所拥有的像素数�
 
 属性|可能的值|说明
 --|:--|:--
-width | 一个正整数或者字符串 device-width | 以 px 为单位定义 viewport 的宽度
-height | 一个正整数或者字符串 device-height | 以 px 为单位定义 viewport 的高度
-initial-scale |	一个0.0 到10.0之间的正数 | 定义设备 dips 宽度（竖屏模式下设备宽度或者横屏模式下的设备高度）与 viewport 尺寸之间的比例
-maximum-scale |	一个0.0 到10.0之间的正数 | 定义最大缩放值；它的值必须大于等于 minimum-scale 的值
-minimum-scale |	一个0.0 到10.0之间的正数 | 定义最小缩放值；它的值必须小于等于 maximum-scale 的值
+width | 一个正整数或者字符串 device-width | 以`px`为单位定义layout viewport的宽度
+height | 一个正整数或者字符串 device-height | 以`px`为单位定义layout viewport的高度
+initial-scale |	一个0.0 到10.0之间的正数 | 初始缩放值, 定义设备`dips`宽度（竖屏模式下设备宽度或者横屏模式下的设备高度）与viewport尺寸之间的比例
+maximum-scale |	一个0.0 到10.0之间的正数 | 定义最大缩放值；它的值必须大于等于minimum-scale的值
+minimum-scale |	一个0.0 到10.0之间的正数 | 定义最小缩放值；它的值必须小于等于maximum-scale的值
 user-scalable |	一个布尔值（yes 或者no） | 如果设置为 no，那么用户无法缩放页面。默认值为 yes
 
 

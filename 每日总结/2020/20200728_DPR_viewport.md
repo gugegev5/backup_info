@@ -13,7 +13,7 @@ PPI（Pixels Per Inch）即像素密度，表示每英寸所拥有的像素数�
 
 ![https://design.google.com/devices/](https://camo.githubusercontent.com/9598a107e7f7029717f52192c90dcaf7008e49c1/687474703a2f2f7777772e773363706c75732e636f6d2f73697465732f64656661756c742f66696c65732f626c6f67732f323031352f313531312f72656d2d342e706e67)
 
-## [w3c Viewport <META> element](https://drafts.csswg.org/css-device-adapt/#viewport-meta)  
+## [w3c Viewport <META> element](https://drafts.csswg.org/css-device-adapt/#viewport-meta), [移动前端开发之viewport的深入理解](https://www.cnblogs.com/2050/p/3877280.html)  
 
 属性|可能的值|说明
 --|:--|:--

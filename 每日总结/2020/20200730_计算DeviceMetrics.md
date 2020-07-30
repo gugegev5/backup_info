@@ -33,7 +33,7 @@ Height = 5.15”
 
 ### Finding dp Resolution
 [Android Developers documentation on pixel density](https://developer.android.com/training/multiscreen/screendensities)  
-pixel resolution is 1080×2280px, physical dimensions are 2.44×5.15
+Pixel 4: pixel resolution is 1080×2280px, ppi: 444
 ```
 px = dp×(dpi/160)
 ```
@@ -42,6 +42,11 @@ px = dp×(dpi/160)
 1080 = dp×2.775
 dp = 1080/2.775
 dp = 389
+```
+Pixel 4 XL: 537 ppi, 1440 x 3040 pixels
+```
+1440 = dp*(537/160)
+dp = 429.05
 ```
 
 ### Finding the density bucket 

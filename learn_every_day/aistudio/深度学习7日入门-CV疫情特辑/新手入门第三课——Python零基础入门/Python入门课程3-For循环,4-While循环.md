@@ -1,4 +1,4 @@
-## For 循环 
+# For 循环 
 For循环是迭代对象元素的常用方法（在第一个示例中，列表）
 
 具有可迭代方法的任何对象都可以在for循环中使用。
@@ -74,3 +74,47 @@ python 2 range生成一个list
 注意: 较长的列表会很慢
 
 <b> 更多参考: </b> [pythons-range-function-explained](http://pythoncentral.io/pythons-range-function-explained/)
+
+# While 循环
+For 循环 | While 循环
+--- | --- 
+遍历一组对象 | 条件为false时自动终止
+没有break也可以结束 | 使用break语句才能退出循环
+
+如果我们希望循环在某个时刻结束，我们最终必须使条件为False
+
+## break语句
+使用break可以完全退出循环
+
+while True条件使得除非遇到break语句，否则不可能退出循环
+
+如果您陷入无限循环，请使用计算机上的ctrl + c来强制终止
+
+比较操作符 | 功能
+--- | --- 
+< | 小于
+<= | 小于或等于
+> | 大于
+>= | 大于或等于
+== | 等于
+!= | 不等于
+
+当我们知道要循环多少次时，Range很有用
+
+下面例子是: 从0开始，但不包括5
+```python
+candidates = list(range(0, 5))
+while len(candidates) > 0: 
+    first = candidates[0]
+    candidates.remove(first)
+    print(candidates)
+    
+#[1, 2, 3, 4]
+#[2, 3, 4]
+#[3, 4]
+#[4]
+#[]
+```
+
+
+

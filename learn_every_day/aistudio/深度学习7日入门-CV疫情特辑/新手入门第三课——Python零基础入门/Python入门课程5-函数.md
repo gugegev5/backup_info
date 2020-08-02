@@ -62,3 +62,19 @@ def greet(*names):
        print("Hello",name)
 greet("Monica","Luke","Steve","John")
 ```
+
+## Python函数: 在列表中移除重复对象
+```python
+# Python code to remove duplicate elements from list
+
+def remove_duplicates(duplicate): 
+    uniques = [] 
+    for num in duplicate: 
+        if num not in uniques: 
+            uniques.append(num) 
+    return(uniques)
+      
+duplicate = [2, 4, 10, 20, 5, 2, 20, 4] 
+print(remove_duplicates(duplicate)) 
+```
+[2, 4, 10, 20, 5]

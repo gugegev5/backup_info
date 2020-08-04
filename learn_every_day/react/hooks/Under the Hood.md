@@ -17,5 +17,11 @@ Note that React may still need to render that specific component again before ba
 
 >react只知道state发生了变化，但不知道哪个state发生了变化
 
-[Under the Hood](https://reactjs.org/docs/hooks-faq.html#under-the-hood)
+# [Under the Hood](https://reactjs.org/docs/hooks-faq.html#under-the-hood)
+#### How does React associate Hook calls with components?
+React keeps track of the currently rendering component. Thanks to the [Rules of Hooks](https://reactjs.org/docs/hooks-rules.html), we know that Hooks are only called from React components (or custom Hooks — which are also only called from React components).
+
+There is an internal list of “memory cells” associated with each component. They’re just JavaScript objects where we can put some data. When you call a Hook like useState(), it reads the current cell (or initializes it during the first render), and then moves the pointer to the next one. This is how multiple useState() calls each get independent local state.
+
+
 

@@ -52,3 +52,24 @@
     background-color: #0f0000;//不生效
 }
 ```
+
+# conclude
+优先级相同，后面覆盖前面
+```css
+.son {
+    height: 100px;
+    background-color: #0f0000;//不生效
+}
+.father>* {
+    background-color: #f00000;//生效
+}
+```
+```css
+.father>* {
+    background-color: #f00000;//不生效
+}
+.son {
+    height: 100px;
+    background-color: #0f0000;//生效
+}
+```

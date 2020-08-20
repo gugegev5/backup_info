@@ -43,7 +43,7 @@
 ```
 
 ## firefox
-![0]('./20200820/basis0.png')
-![auto]('./20200820/basisauto.png')
+![0](20200820/basis0.png)
+![auto](20200820/basisauto.png)
 
 ## chrome

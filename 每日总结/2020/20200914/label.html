@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>label</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        label {
+            /* position: absolute; */
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            document.querySelector('#ul').addEventListener('click', ulclick, false)
+            // document.querySelector('#user').addEventListener('click', ulclick, false)
+            // document.querySelector('#fans').addEventListener('click', ulclick, false)
+        }
+        const ulclick = function () {
+            var e = window.event || arguments.callee.caller.arguments[0];
+            console.log('onclick:', e.target, this.getAttribute('data-index'));
+        }
+    </script>
+</head>
+
+<body>
+
+    <ul id="ul" data-index="ul">
+        <li data-index="user-li">
+            <input type='radio' id='user' name='rankview' class="i0" data-index="user-input"/>
+            <label for='user' data-index="user-label">user</label>
+
+        </li>
+        <li data-index="fans-li">
+            <input type='radio' id='fans' name='rankview' class="i1" data-index="fans-input"/>
+            <label for='fans' data-index="fans-label">fans</label>
+
+        </li>
+    </ul>
+
+</body>
+
+</html>

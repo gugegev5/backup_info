@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>listener</title>
+    <style>
+        #testCapture {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+
+        #testCapture1 {
+            position: relative;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+        }
+
+        #testCapture2 {
+            width: 400px;
+            height: 200px;
+            background: #00f;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.querySelector('body').addEventListener('click', () => { 
+                document.querySelector('#text').innerHTML += "<br>"
+            })
+            document.querySelector('#testCapture').addEventListener('click', ulclick, { capture: false, once: false, passive: true })
+            document.querySelector('#testCapture1').addEventListener('click', ulclick, true)
+            document.querySelector('#testCapture2').addEventListener('click', ulclick, true)
+        }
+        const ulclick = function () {
+            // var e = window.event || arguments.callee.caller.arguments[0];
+            // console.log('onclick:', e.target, this.getAttribute('data-index'));
+            document.querySelector('#text').innerHTML += (this.getAttribute('data-index') + ' ')
+        }
+    </script>
+</head>
+
+<body>
+    <div id="testCapture" data-index="0">
+        0 capture:false
+        <div id="testCapture1" data-index="1">1</div>
+    </div>
+    <div id="testCapture2" data-index="2">2</div>
+    <br>
+    <div>
+        text:
+        <span id='text' />
+    </div>
+</body>
+
+</html>

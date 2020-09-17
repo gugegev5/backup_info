@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <script>
+        // window.onload = function () {
+            const styleText = `
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    body, html {
+                        font: 14px/1.6 Titillium,'微软雅黑',Arial,'黑体','宋体',sans-serif;
+                        font-weight: 200;
+                        text-shadow: 0 1px #eee, 0 0 5px rgba(0,0,0,.2);
+                    }
+                    .loginBox {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .loginContent {
+                        width: 400px;
+                        height: 500px;
+                        position: absolute;
+                        margin: auto;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        padding: 35px 0;
+                        box-sizing: border-box;
+                        background-color: #fff;
+                        box-shadow: 0 0 10px 0 #8c908b;
+                    }
+                    .loginContent::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        -webkit-transform: rotate(-3deg);
+                        transform: rotate(-3deg);
+                        background-color: #fff;
+                        box-shadow: 0 0 10px 0 #333532;
+                        z-index: -1;
+                    }
+                    .closeLogin {
+                        position: absolute;
+                        width: 50px;
+                        height: 36px;
+                        text-align: center;
+                        line-height: 36px;
+                        right: 0;
+                        top: 0;
+                        font-size: 20px;
+                        color: #999;
+                        cursor: pointer;
+                    }
+                    .titleType {
+                        text-align: center;
+                        font-size: 22px;
+                    }
+                    .titleType span {
+                        display: none;
+                    }
+                    .titleType .active {
+                        display: block;
+                    }
+                    .formBox {
+                        position: relative;
+                        margin: 40px 50px 0;
+                        height: calc(100% - 60px);
+                        overflow: hidden;
+                    }
+                    @font-face {
+                        font-family: icomoon;
+                        src: url(icomoon.eot?ejwy4k);
+                        src: url(icomoon.eot?ejwy4k#iefix) format('embedded-opentype'),url(icomoon.ttf?ejwy4k) format('truetype'),url(icomoon.woff?ejwy4k) format('woff'),url(icomoon.svg?ejwy4k#icomoon) format('svg');
+                        font-weight: 400;
+                        font-style: normal;
+                        font-display: block
+                    }
+                    [class*=" icon-"], [class^=icon-] {
+                        font-family: icomoon!important;
+                        speak: none;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                    .third-login {
+                        background-color: #19c249;
+                        font-size: 16px;
+                        display: block;
+                        margin: 0 auto 30px;
+                        width: 250px;
+                        height: 50px;
+                        line-height: 50px;
+                        border-radius: 5px;
+                        color: #fff;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .third-login.wx{
+                        background-color: #19c249;
+                    }
+                    .third-login.qq{
+                        background-color: #1ebcf5;
+                    }
+                    .third-login.phone-login{
+                        background-color: #ffcf11;
+                    }
+                    .third-login i {
+                        font-size: 30px;
+                        color: #fff;
+                        margin-right: 20px;
+                        vertical-align: middle;
+                    }
+                    .icon-wx:before {
+                        content: "\\e936";
+                    }
+                    .icon-qq2:before {
+                        content: "\\e942";
+                    }
+                    .icon-phone:before {
+                        content: "\\e943";
+                    }
+                `;
+            const cssUrl = URL.createObjectURL(new Blob([styleText]));
+            const cssLink = document.createElement('link');
+            cssLink.rel = 'stylesheet'
+            cssLink.href = cssUrl;
+            cssLink.type = 'text/css';
+            document.querySelector('head').appendChild(cssLink)
+        // }
+    </script>
+</head>
+
+<body>
+    <div class="loginBox">
+        <div class="loginContent">
+            <div class="closeLogin">X</div>
+            <p class="titleType">
+                <span class="active">登录</span>
+                <span>登录</span>
+                <span>注册</span>
+                <span>忘记密码</span>
+            </p>
+            <div class="formBox">
+                <div class="third-login wx" data-type="wx">
+                    <i class="icon-wx"></i>
+                    微信登录
+                </div>
+                <div class="third-login qq" data-type="qq">
+                    <i class="icon-qq2"></i>
+                    QQ登录
+                </div>
+                <div class="third-login phone-login">
+                    <i class="icon-phone"></i>
+                    手机登录
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

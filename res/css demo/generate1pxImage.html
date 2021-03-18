@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>generate 1x1 image</title>
+
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('fontCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#F5F5F5';
+            ctx.fillRect(0, 0, 1, 1);
+            const dataurl = canvas.toDataURL('image/jpeg')
+            var bin = atob(dataurl.split(',')[1]);
+            //创建空的Uint8Array
+            var buffer = new Uint8Array(bin.length);
+            //将图像数据逐字节放入Uint8Array中
+            for (var i = 0; i < bin.length; i++) {
+                buffer[i] = bin.charCodeAt(i);
+            }
+            //利用Uint8Array创建Blob对象
+            var blob = new Blob([buffer.buffer], { type: 'image/jpeg' });
+            const url = window.URL.createObjectURL(blob);
+            console.log(dataurl)
+            console.log(url)
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id='fontCanvas' width="1" height="1"></canvas>
+</body>
+
+</html>

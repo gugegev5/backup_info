@@ -37,3 +37,33 @@ Promise.resolve(true)
 4
 3
 ```
+### 和function没关系。。。
+```js
+let a = Promise.resolve(true)
+.then(()=>{console.log(1);return 1})
+.then(()=>{console.log(2);return 2})
+.then(()=>Promise.reject(3))
+.then(()=>{console.log(4);return 4})
+.catch (() =>{console.log(5);return 5})
+a
+```
+```
+1
+2
+5
+Promise {<fulfilled>: 5}
+```
+### 去掉catch
+```js
+let a = Promise.resolve(true)
+.then(()=>{console.log(1);return 1})
+.then(()=>{console.log(2);return 2})
+.then(()=>Promise.reject(3))
+.then(()=>{console.log(4);return 4})
+a
+```
+```
+1
+2
+Promise {<rejected>: 3}
+```

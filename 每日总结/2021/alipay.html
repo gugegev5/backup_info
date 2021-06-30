@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.min.js"></script>
+    <script>
+        // ap.chooseImage()
+        //     .then(function (result) {
+        //         return new Promise(function (resolve, reject) {
+        //             yourImageDom.onload = resolve;
+        //             yourImageDom.onerror = reject;
+        //             yourImageDom.src = result.apFilePaths[0];
+        //         })
+        //     })
+        //     .then(function () {
+        //         return ap.alert('图片加载成功');
+        //     })
+        //     .catch(function () {
+        //         ap.showToast('图片加载失败');
+        //     });
+        ap.tradePay({
+            tradeNO: '201802282100100427058809844'
+        }, function (res) {
+            ap.alert(res.resultCode);
+        });
+    </script>
+</head>
+
+<form id='alipaysubmit' name='alipaysubmit' action='https://openapi.alipay.com/gateway.do?charset=UTF-8' method='POST'>
+    <input type='hidden' name='biz_content'
+        value='{"body":"\u5927\u4e50\u900f","subject":"\u4f01\u9e45\u9e45\u809d","out_trade_no":"70501111111S00119917338","timeout_express":"90m","total_amount":0.01,"goods_type":"0","app_id":"2016061701529608","method":"alipay.trade.wap.pay","format":"json","charset":"UTF-8","sign_type":"RSA2","timestamp":"2021-06-29 16:47:47","version":"1.0","return_url":"https:\/\/p7api.qiecdn.com\/api\/payNotify\/callback\/alipayh5\/return","notify_url":"https:\/\/p7api.qiecdn.com\/api\/payNotify\/callback\/alipayh5\/notify"}' /><input
+        type='hidden' name='app_id' value='2016061701529608' />
+    <input type='hidden' name='version' value='1.0' />
+    <input type='hidden' name='format' value='json' />
+    <input type='hidden' name='sign_type' value='RSA' />
+    <input type='hidden' name='method' value='alipay.trade.wap.pay' />
+    <input type='hidden' name='timestamp' value='2021-06-29 16:47:47' />
+    <input type='hidden' name='alipay_sdk' value='alipay-sdk-php-20161101' />
+    <input type='hidden' name='prod_code' value='QUICK_WAP_PAY' />
+    <input type='hidden' name='notify_url' value='https://p7api.qiecdn.com/api/payNotify/callback/alipayh5/notify' />
+    <input type='hidden' name='return_url' value='http://live.qq.com' /><input type='hidden' name='charset'
+        value='UTF-8' />
+    <input type='hidden' name='sign'
+        value='pIE8j9yEfhb+zc8WMQ8pADTvs/L5v9E7M54oqe/CdOzFPjEempRGwzeE4wn78gutB/JLSdjFIRhidd230drQpWClquUTarSyXYwkVjRHeuYp4nt04IE324o1nebQQSeGeg3unmC8SxDKEsQUE3nVM3y4heZJHozlprO+wMClhHuHOp+molvlhSHeimL/d1uh11y8w3wHYG/QNxNUeD8PsJe2wEvdGoNfM/8gM5fUgkn85z8Mr/46g9or3MYTSVpZCqGqUsGjNgfVH23aviqR+CmKpnXDHA0PWFh5ZBE7tAyglSaKCsXMk9uqvqB1ZtbhOMvmniJryOVqA2yD+G69+Q==' />
+    <input type='submit' value='ok' style='display:none;'>
+</form>
+
+<script>document.forms['alipaysubmit'].submit();</script>
+
+</html>
